@@ -6,6 +6,7 @@ use App\Models\Participant;
 use App\Models\Room;
 use Illuminate\Validation\Rule;
 use Illuminate\View\View;
+use Livewire\Attributes\Computed;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
@@ -18,7 +19,7 @@ class SprintDecision extends Component
 
     public function mount(): void
     {
-        $this->room = Room::inRandomOrder()->first();
+        $this->room = Room::first();
     }
 
     public function rules(): array
@@ -42,6 +43,15 @@ class SprintDecision extends Component
         ]);
 
         $this->success = true;
+    }
+
+    #[Computed]
+    public function participants()
+    {
+        return $this->room
+            ->participants
+            ->map(fn($participant) =>
+            preg_replace('/(?<=.{2}).(?=.*@)/u', '*', $participant->email));
     }
     public function render(): View
     {
