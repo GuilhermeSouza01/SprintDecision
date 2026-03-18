@@ -32,4 +32,16 @@
         </ul>
     </div>
 
+    @if($winner)
+        <div class="flex flex-col items-center justify-center p-4 bg-blue-200 border border-b-blue-400 rounded">
+            <h1 class="text-2xl font-bold">The winner is:</h1>
+            <p class="mt-2">{{ $winner }}</p>
+        </div>
+    @endif
+    <div>
+        <x-ui.button type="button" wire:click="getWinner">
+            Draw the winner
+        </x-ui.button>
+    </div>
+
 </div>
