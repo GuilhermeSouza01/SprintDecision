@@ -6,8 +6,14 @@
         {{ $label }}
     </label>
 
-        <input type="text" {{ $attributes }}
+        <input  {{ $attributes }}
             class=" mt-1 block w-full p-2 border-gray-300 rounded-md shadow outline-none border focus:border-blue-700"
         >
+
+        @error($attributes->get('name'))
+        <div class="text-red-500 text-sm mt-2">
+            {{ $message }}
+        </div>
+        @enderror
 
 </div>
