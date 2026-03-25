@@ -13,7 +13,7 @@
 
         @livewireStyles
     </head>
-    <body class="min-h-screen bg-[#FDFDFC] text-[#1b1b18] flex items-center justify-center p-4">
+    <body class="bg-[#FDFDFC] text-[#1b1b18]">
 
     <x-ui.container>
         {{ $slot }}
