@@ -1,8 +1,6 @@
-@props(['label', 'name'])
-
 <div class="flex flex-col gap-1">
 
-    <label for="name" class="text-sm font-medium text-gray-700">
+    <label for="name" class="block text-sm font-medium text-gray-700">
         {{ $label }}
     </label>
 
