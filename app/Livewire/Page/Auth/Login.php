@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Livewire\Auth;
+namespace App\Livewire\Page\Auth;
 
-use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Validation\ValidationException;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
@@ -22,7 +22,7 @@ class Login extends Component
         $this->ensureIsNotRateLimited();
 
         if(Auth::attempt(['email' => $this->email, 'password' => $this->password], true)) {
-            RateLimiter::clear($this->rateKey);
+            RateLimiter::clear($this->rateKey());
             session()->regenerate();
             $this->redirectRoute('home');
         }
