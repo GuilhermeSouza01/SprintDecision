@@ -10,11 +10,11 @@ use Illuminate\Support\Facades\Session;
 
 class LogoutController
 {
-    public function __invoke(): RedirectResponse
+    public function __invoke(Request $request): RedirectResponse
     {
         Auth::logout();
-        Session::invalidate();
-        Session::regenerateToken();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
 
         return to_route('home');
     }

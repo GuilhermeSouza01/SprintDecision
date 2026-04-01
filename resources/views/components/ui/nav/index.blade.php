@@ -1,9 +1,24 @@
-<nav class="bg-white fixed w-full z-20 top-0 inset-s-0 border-b border-b-gray-200 ">
-    <div class="items-center justify-between flex w-full md:w-auto md:order-1" id="navbar-sticky">
-        <ul
-            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white "
-        >
+<nav class="bg-white fixed w-full z-20 top-0 inset-x-0 border-b border-gray-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+
+        <a href="{{ route('home') }}" class="flex items-center gap-2 shrink-0">
+            <div class="w-7 h-7 grid grid-cols-2 grid-rows-2 gap-0.5">
+                <span class="bg-red-500 rounded-sm"></span>
+                <span class="bg-blue-500 rounded-sm"></span>
+                <span class="bg-yellow-400 rounded-sm"></span>
+                <span class="bg-green-500 rounded-sm"></span>
+            </div>
+            <div class="leading-tight">
+                <p class="text-gray-400 text-[9px] font-medium uppercase tracking-widest">Sprint</p>
+                <p class="text-gray-900 font-bold text-sm tracking-wide uppercase">Decision</p>
+            </div>
+        </a>
+
+        <ul class="flex items-center gap-2">
             {{ $slot }}
         </ul>
+
     </div>
 </nav>
+
+<div class="h-16"></div>

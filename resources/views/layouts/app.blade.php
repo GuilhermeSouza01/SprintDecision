@@ -17,22 +17,22 @@
 
     @auth
         <x-ui.nav>
-            <x-ui.nav.item href="{{ route('home') }}">
+            <x-ui.nav.item route="home">
                 Home
             </x-ui.nav.item>
-            <x-ui.nav.item href="{{ route('admin.sprint') }}">
+            <x-ui.nav.item route="admin.sprint">
                 Sprint
             </x-ui.nav.item>
-            <x-ui.nav.item href="{{ route('logout') }}">
+            <x-ui.nav.item route="logout" button>
                 Logout
             </x-ui.nav.item>
         </x-ui.nav>
     @else
         <x-ui.nav>
-            <x-ui.nav.item href="{{ route('home') }}">
+            <x-ui.nav.item route="home">
                 Home
             </x-ui.nav.item>
-            <x-ui.nav.item href="{{ route('login') }}">
+            <x-ui.nav.item route="login">
                 Login
             </x-ui.nav.item>
         </x-ui.nav>

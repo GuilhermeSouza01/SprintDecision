@@ -14,7 +14,7 @@ Route::get('/login', Login::class)
 
 Route::get('/', \App\Livewire\SprintDecision::class)->name('home');
 Route::middleware('auth')->group(function () {
-    Route::get('/logout', LogoutController::class)->name('logout');
+    Route::post('/logout', LogoutController::class)->name('logout');
     Route::get('/admin/sprint', Sprint::class)->name('admin.sprint');
 });
 
