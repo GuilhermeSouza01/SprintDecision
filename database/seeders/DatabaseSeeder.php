@@ -20,8 +20,15 @@ class DatabaseSeeder extends Seeder
 
         Room::factory(1)->create();
         User::factory()->create([
+            'name' => 'Guilherme',
             'email' => 'gui@email.com',
+            'is_admin' => true,
         ]);
 
+        User::factory()->create([
+            'name' => 'Sabrina',
+            'email' => 'sabrina@email.com',
+            'is_admin' => false,
+        ]);
     }
 }
