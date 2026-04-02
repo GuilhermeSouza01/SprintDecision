@@ -17,14 +17,14 @@
         wire:navigate
         @class([
             'relative px-4 py-2 text-sm font-medium rounded-md transition-all duration-200',
-            'text-sky-700 hover:text-sky-900 hover:bg-sky-400/10 ' => !request()->routeIs($route),
-            'text-sky-700 bg-sky-400/10 hover:text-sky-300' => request()->routeIs($route),
+            'text-sky-700 hover:text-sky-900 hover:bg-sky-400/10 dark:text-gray-300 dark:bg-none dark:hover:text-gray-200 dark:hover:bg-[#c9d9ee]/10' => !request()->routeIs($route),
+            'text-sky-700 bg-sky-400/10 hover:text-sky-300 dark:text-gray-200 dark:hover:text-gray-400 dark:bg-[#c9d9ee]/10 ' => request()->routeIs($route),
         ])
     >
     {{ $slot }}
 
         @if(request()->routeIs($route))
-            <span class="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-sky-400"></span>
+            <span class="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-sky-400 dark:bg-gray-400"></span>
         @endif
         </a>
     @endif

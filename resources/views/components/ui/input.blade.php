@@ -1,11 +1,11 @@
 <div class="flex flex-col gap-1">
 
-    <label for="name" class="block text-sm font-medium text-gray-700">
+    <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-100">
         {{ $label }}
     </label>
 
         <input  {{ $attributes }}
-            class=" mt-1 block w-full p-2 border-gray-300 rounded-md shadow outline-none border focus:border-blue-700"
+            class=" mt-1 block w-full p-2 border-gray-300 rounded-md shadow outline-none border focus:border-[#4167cf] dark:border-gray-500 "
         >
 
         @error($attributes->get('name'))

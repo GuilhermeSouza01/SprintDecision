@@ -1,4 +1,4 @@
-<nav class="bg-white fixed w-full z-20 top-0 inset-x-0 border-b border-gray-200 shadow-sm">
+<nav class="bg-white fixed w-full z-20 top-0 inset-x-0 border-b border-gray-200 shadow-sm dark:bg-gray-900 dark:text-gray-100 dark:border-gray-800">
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
 
         <a href="{{ route('home') }}" class="flex items-center gap-2 shrink-0">
@@ -9,8 +9,8 @@
                 <span class="bg-green-500 rounded-sm"></span>
             </div>
             <div class="leading-tight">
-                <p class="text-gray-400 text-[9px] font-medium uppercase tracking-widest">Sprint</p>
-                <p class="text-gray-900 font-bold text-sm tracking-wide uppercase">Decision</p>
+                <p class="text-gray-400 dark:text-gray-100 text-[9px] font-medium uppercase tracking-widest">Sprint</p>
+                <p class="text-gray-900 dark:text-gray-400 font-bold text-sm tracking-wide uppercase">Decision</p>
             </div>
         </a>
 

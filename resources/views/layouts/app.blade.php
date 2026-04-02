@@ -13,16 +13,19 @@
 
         @livewireStyles
     </head>
-    <body class="bg-[#FDFDFC] text-[#1b1b18]">
+    <body class="bg-[#FDFDFC] text-[#1b1b18] dark:bg-gray-900 dark:text-gray-200">
 
     @auth
         <x-ui.nav>
             <x-ui.nav.item route="home">
                 Home
             </x-ui.nav.item>
-            <x-ui.nav.item route="admin.sprint">
-                Sprint
-            </x-ui.nav.item>
+            @can('isAdmin')
+                <x-ui.nav.item route="admin.sprint">
+                    Sprint
+                </x-ui.nav.item>
+            @endcan
+
             <x-ui.nav.item route="logout" button>
                 Logout
             </x-ui.nav.item>

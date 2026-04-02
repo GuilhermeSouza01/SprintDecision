@@ -18,11 +18,11 @@
         </form>
     @endif
 
-    <div class="border border-gray-200 rounded-lg p-4 mt-4">
-        <h3 class="text-lg font-medium text-gray-800 mb-4">Participants</h3>
-        <ul class="divide-y divide-gray-100">
+    <div class="border border-gray-200 dark:border-gray-500  rounded-lg p-4 mt-4">
+        <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200 mb-4">Participants</h3>
+        <ul class="divide-y divide-gray-100 dark:divide-gray-700">
             @foreach($this->participants as $participant)
-                <li class="py-2 px-2 hover:bg-gray-50">{{ $participant}}</li>
+                <li class="py-2 px-2 hover:bg-gray-50 dark:hover:bg-gray-700">{{ $participant}}</li>
             @endforeach
         </ul>
     </div>
