@@ -4,6 +4,7 @@ namespace App\Livewire\Sprint;
 
 use App\Models\Room;
 use Illuminate\Support\Str;
+use Livewire\Attributes\On;
 use Livewire\Component;
 
 class Create extends Component
@@ -11,8 +12,7 @@ class Create extends Component
     public bool $open = false;
     public string $name = '';
 
-    protected $listeners = ['open-create' => 'openModal'];
-
+    #[On('open-create')]
     public function openModal(): void
     {
         $this->open = true;

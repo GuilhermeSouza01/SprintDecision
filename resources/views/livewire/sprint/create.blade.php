@@ -4,7 +4,7 @@
             x-data
             x-on:click.away="$wire.set('open', false)"
             x-on:keydown.escape.window="$wire.set('open', false)"
-            x-show="$wire.open"
+            x-show="$wire.$get('open')"
             class="fixed inset-0 z-50 flex items-center justify-center bg-black/40"
         >
             <div
