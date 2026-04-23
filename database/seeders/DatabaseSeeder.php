@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        Room::factory(1)->create();
+        Room::factory(30)->create();
         User::factory()->create([
             'name' => 'Guilherme',
             'email' => 'gui@email.com',
